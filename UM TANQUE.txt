@@ -1,0 +1,32 @@
+UM TANQUE
+
+vasao = qi(t)-qo(t)
+
+Cdh(t)/dt = qi(t)-qo(t) 
+= qi(t) - h(t)/R
+
+CRdh(t)/Rdt = Rqi(t)/R - h(t)/R
+CRdh(t)/dt = Rqi(t) - h(t)
+
+CRSh(s) = Rqi(S) - h(S)
+CRSh(s) + h(S)= Rqi(S) 
+h(s)[CRS + 1]= Rqi(S)
+h(s) = Rqi(S)/[CRS + 1]
+[h(s)/qi(S)] = R/[CRS + 1]
+
+ZERO = NAO EXISTE
+POLO= 1/RC
+
+JOGA NO GRAFICO
+
+FAZER BODE 
+
+ACHAR O GANHO S=0 
+DEPOIS 20LOG DO GANHO
+
+RESPSOTA AO DEGRAU
+1) PEGA A FUNCAO DE TRANSFERENCIA E ADD O DEGRAU
+2) FAZ FRAÇÕES PARCIAIS
+3) OLHA NA TABELA 
+[1/s = u(t)]
+a/(s+a) = aEXP(-at)

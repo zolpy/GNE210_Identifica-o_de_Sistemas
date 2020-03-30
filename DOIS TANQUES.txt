@@ -1,0 +1,39 @@
+DOIS TANQUES
+
+vasao = qi(t)-qo(t)
+
+C1dh1(t)/dt = qi1(t)-qo1(t) =  
+= qi1(t) - [h1(t)-h2(t)]/R1 (I)
+
+C2dh2(t)/dt = q01(t) + qi2(t) - q02(t)=  
+C2dh2(t)/dt = [h1(t)-h2(t)]/R1 + qi2(t) - h2(t)/R2 =  (II)
+
+x1=h1=y1
+x2=h2=y2
+u1=qi1
+u2=qi2
+
+EM UM TEMOS
+C1R1dh1(t)/dt = R1qi1(t) - h1(t) +h2(t)
+C1.R1.S.h1(s) = R1qi1(s) - h1(s) +h2(s)
+
+X1(ponto).C1.R1 = R1.u1 - X1+ X2
+X1(ponto) = [- X1 + X2 + R1u1]/R1C1
+
+EM DOIS TEMOS
+
+C2dh2(t)/dt = [h1(t) - h2(t)]/ R1 + qi2(t) - h2(t)/R2
+C2SX2 = [X1-X2]/R1 +u2 - X2/R2
+X2(ponto) = (X1/R1C2) - (1/R1C2 + 1/R2C2)X2 + u2/C2 
+
+[X1(ponto) X2(ponto)]  = 
+[-1/R1C1        1/R1C1     ]*[X1] =
+[1/R1C2 - (1/R1C2 + 1/R2C2)]*[X2] =
+
+[1/C1     0]*[u1]
+[0     1/C2]*[u2]
+
+[y1 ] =[1  0]*[X1]
+[y2 ] =[0  1]*[X2]
+
+

@@ -1,0 +1,28 @@
+%Parte 4: Método de Sundaresan
+area = 1-ynormalizado %Área sob o gráfico
+m1 = trapz(tempo,area) %Cálculo de m1***------
+Mi=(1-0.27)/(78-35) %obtido pelo grafico
+tm=78;
+lambda=(tm-m1)*Mi %calculo de lambda
+eta=0.228; %tirado do grafico
+
+Tau1 = (eta^(eta/(1-eta))) / Mi
+Tau2= (eta^(1/(1-eta))) / Mi
+atraso=m1 - Tau1 -Tau2
+
+s = tf('s');
+
+%plotar a resposta
+d = exp(-atraso*s)
+Hsund=(d)/((Tau1*s+1)*(Tau2*s+1))
+Hsund.OutputDelay=atraso;
+simulsund=step(Hsund,tempo);%Resposta ao degrau
+
+%Figura do gráfico dos métodos de Sundaresan
+figure
+plot(tempo,simulsund,'red','linewidth',2)
+hold on
+plot(tempo,ynormalizado)
+title('Resposta ao Degrau')
+grid on
+legend('Método de Sundaresan','Sinal Amostrado Normalizado',4);

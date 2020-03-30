@@ -1,0 +1,19 @@
+TERMICOS
+
+CdTo(t)/dt = qi(t) - qo(t)
+
+onde: 
+q0 = [Ti(t) - To(t)]/R
+
+CdTo(t)/dt = qi(t) - [Ti(t) - To(t)]/R
+CRdTo(t)/dt = R*qi(t)/R - [Ti(t) - To(t)]/R
+
+CRSTo(s) = R*qi(s) - [Ti(s) - To(s)]
+To = X1
+qi = u1
+Ti = u2
+
+RCSX1 = Ru1 - u2 + X1
+SX1[RC +1] = Ru1 - u2
+
+X1(ponto) = X1/RC + Ru1/RC - u2/RC
